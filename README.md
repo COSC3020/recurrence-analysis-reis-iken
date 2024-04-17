@@ -39,6 +39,10 @@ We can use the base case T(1) = O(1) to solve our recurrence relation.
 Now we can solve by substitution:
 
 $T(n) = 3(3T(n/9) + n^3) + n^3$
+
 $= 9T(n/9) + 2n^3$
+
 $= 27T(n/27) + 3n^3$
+
 $= 3^iT(n/3^i) + in^3
+
