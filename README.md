@@ -34,15 +34,25 @@ might help with the notation for mathematical expressions.
 
 The recurrence relation can be expressed as $T(n) = 3T(n/3) + n^3$ as the function makes 3 recursive calls of size n/3, and there are $n^3$ loop iterations.
 
-We can use the base case T(1) = O(1) to solve our recurrence relation.
+We can use the base case T(1) = $O$(1) to solve our recurrence relation.
 
 Now we can solve by substitution:
 
 $T(n) = 3(3T(n/9) + n^3) + n^3$
 
-$= 9T(n/9) + 2n^3$
+$= 9T(n/9) + n^3/27 + n^3$
 
-$= 27T(n/27) + 3n^3$
+$= 27T(n/27) + n^3/81 + n^3$
 
-$= 3^iT(n/3^i) + in^3$
+Generalization:
+$= 3^iT(n/3^i) + (n/3^i)^3$
 
+For $i = \log_{3} n$:
+
+$= nT(1) + n^3\log_{3} n$
+
+Since T(1) = $O$(1), we can say that T(1) = c (c is some constant), and thus we have:
+
+$T(n) = cn + n^3\log_{3} n$
+
+We ignore the cn, thus leaving us with our big-$O$ bound of $O(n^3\log n)$.
