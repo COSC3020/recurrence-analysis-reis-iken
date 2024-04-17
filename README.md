@@ -43,7 +43,7 @@ We can use the base case T(1) = $O$(1) to solve our recurrence relation.
 
 Now we can solve by substitution:
 
-$T(n) = 3(3T(n/9) + n^3) + n^3$
+$T(n) = 3(3T(n/9) + (n/3)^3) + n^3$
 
 $= 9T(n/9) + n^3/27 + n^3$
 
