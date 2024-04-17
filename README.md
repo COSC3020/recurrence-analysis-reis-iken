@@ -31,3 +31,10 @@ function mystery(n) {
 Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
+
+The recurrence relation can be expressed as $T(n) = 3T(n/3) + cn^3$ as the function makes 3 recursive calls of size n/3, and there are $n^3$ loop iterations.
+
+We can use the base case T(1) = O(1) to solve our recurrence relation.
+
+Let n = $3^i$ . This gives us $T(3^i) = 3T((3^i)/3) + c((3^i)^3)$ , which we can simplify to $T(3^i) = 3T(3^{i-1}) + c(3^{3i})$
+
