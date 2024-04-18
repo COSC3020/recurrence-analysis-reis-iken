@@ -57,4 +57,4 @@ $= nT(1) + 1$
 
 Since T(1) = $O$(1), we get $n * O(1) + 1$
 
-We can ignore the n and the +1. Thus, we are left with our big- $O$ bound of $O(1)$
+We can ignore the n and the +1. Thus, we are left with our big $O$ bound of $O(1)$
