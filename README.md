@@ -48,6 +48,7 @@ $T(n) = 3(3T(n/9) + (n/3)^5) + n^5$
 $= 9T(n/9) + n^5/81 + n^5$
 
 Generalization:
+
 $= 3^iT(n/3^i) + (n/3^i)^5$
 
 For $i = \log_{3} n$:
