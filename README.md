@@ -41,10 +41,12 @@ The recurrence relation can be expressed as $T(n) = 3T(n/3) + n^3$ as the functi
 
 Let's substitute:
 
-$T(n) = 3(3T(n/9) + 3(n/3)^3) + n^3$
+$T(n) = 3(3T(n/9) + (n/3)^3) + n^3$
+$= 9T(n/9) + 2n^3$
+$= 27T(n/27) + (29n^3)/27$
 
-Generalization:
+Generalization with $i = \log_{3} n$:
 
-$= 3^iT(n/3^i) + i(n^3)$
+$= nT(1) + (n^4 - n^3)/2$
 
-Since we have a dominant term of $n^3$, we can conclude that our big $O$ bound is $O(n^3)$.
+Since we have a dominant term of $n^4$, we can conclude that our big $O$ bound is $O(n^4)$.
