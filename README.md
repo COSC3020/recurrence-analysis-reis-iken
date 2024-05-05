@@ -37,18 +37,14 @@ might help with the notation for mathematical expressions.
 
 **MY ANSWER:**
 
-The recurrence relation can be expressed as $T(n) = 3T(n/3) + n^5$ as the function makes 3 recursive calls of size n/3, and there are $n^5$ loop iterations.
+The recurrence relation can be expressed as $T(n) = 3T(n/3) + n^3$ as the function makes 3 recursive calls of size n/3, and there are 3 nested loops.
 
-We can use the base case T(1) = $O$(1) to solve our recurrence relation.
+Let's substitute:
 
-Now we can solve by substitution:
-
-$T(n) = 3(3T(n/9) + (n/3)^5) + n^5$
-
-$= 9T(n/9) + n^5/81 + n^5$
+$T(n) = 3(3T(n/9) + 3(n/3)^3) + n^3$
 
 Generalization:
 
-$= 3^iT(n/3^i) + (n/3^i)^5$
+$= 3^iT(n/3^i) + i(n^3)$
 
-Since we have a dominant term of $n^5$, we can conclude that our big $O$ bound is $O(n^5)$.
+Since we have a dominant term of $n^3$, we can conclude that our big $O$ bound is $O(n^3)$.
