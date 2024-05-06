@@ -37,20 +37,24 @@ might help with the notation for mathematical expressions.
 
 **MY ANSWER:**
 
-The recurrence relation can be expressed as $T(n) = 3T(n/3) + n^3$ as the function makes 3 recursive calls of size n/3, and there are 3 nested loops.
+Base case: T(n) = 1 for n $\le$ 1
 
-Let's substitute:
+The recurrence relation can be expressed as $T(n) = 3T(n/3) + n^5$ as the function makes 3 recursive calls of size n/3, and there are 3 nested loops in which the upper bounds are n*n, n, and n*n (resulting in n^5).
 
-$T(n) = 3(3T(n/9) + (n/3)^3) + n^3$
-$= 9T(n/9) + 2n^3$
-$= 27T(n/27) + (28n^3)/27$
+Let's expand:
 
-Generalization:
+$T(n) = 3(3T(n/9) + (n/3)^5) + n^5$
+$= 9T(n/9) + n^5 + 3(n/3)^5$
+$= 27T(n/27) + n^5 + n^5/3^4 + n^5/9^4$
 
-$T(n) = 3^k T(n/3^k) + \sum_{i=0}^{k-1} 3^i (n/3^i)^3$
+Now let's make a generalization:
 
-Substituting in $k = \log_{3} n$:
+$T(n) = 3^iT(n/3^i) + n^5/3^{4(i-1)} + n^5/3^{4(i-2)} + ... + n^5$
 
-$= nT(1) + (\log_{3} n)n^3$
+Substituting in $i = \log_{3} n$:
 
-Since we have a dominant term of $n^3(\log_{3} n)$, we can conclude that our big $O$ bound is $O(n^3(logn))$.
+$= nT(1) + n^5/(n^4 * 3^{-4}) + n^5/(n^4 * 3^{-8}) + ... + n^5$
+
+$= n + (3^4(n)) + (3^8(n)) + ... + n^5$
+
+Since we have a dominant term of $n^5$, we can conclude that our big $O$ bound is $O(n^5)$.
