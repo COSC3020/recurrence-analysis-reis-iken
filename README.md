@@ -39,7 +39,7 @@ might help with the notation for mathematical expressions.
 
 Base case: T(n) = 1 for n $\le$ 1
 
-The recurrence relation can be expressed as $T(n) = 3T(n/3) + n^5$ as the function makes 3 recursive calls of size n/3, and there are 3 nested loops in which the upper bounds are $n*n$, $n$, and $n*n$ (resulting in n^5).
+The recurrence relation can be expressed as $T(n) = 3T(n/3) + n^5$ as the function makes 3 recursive calls of size n/3, and there are 3 nested loops in which the upper bounds are $n*n, n, and n*n$ (resulting in n^5).
 
 Let's expand:
 
