@@ -45,7 +45,11 @@ $T(n) = 3(3T(n/9) + (n/3)^3) + n^3$
 $= 9T(n/9) + 2n^3$
 $= 27T(n/27) + (29n^3)/27$
 
-Generalization with $i = \log_{3} n$:
+Generalization:
+
+$T(n) = 3^k T(n/3^k) + \sum_{i=0}^{k-1} 3^i (n/3^i)^3$
+
+Substituting in $i = \log_{3} n$:
 
 $= nT(1) + (n^4 - n^3)/2$
 
