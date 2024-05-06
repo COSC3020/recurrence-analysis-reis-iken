@@ -53,4 +53,4 @@ Substituting in $k = \log_{3} n$:
 
 $= nT(1) + (\log_{3} n)n^3$
 
-Since we have a dominant term of $n^3(\log_{3} n)$, we can conclude that our big $O$ bound is $O(n^3(\log_{3} n))$.
+Since we have a dominant term of $n^3(\log_{3} n)$, we can conclude that our big $O$ bound is $O(n^3(\logn))$.
