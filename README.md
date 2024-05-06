@@ -47,9 +47,9 @@ $= 27T(n/27) + (29n^3)/27$
 
 Generalization:
 
-$T(n) = 3^i T(n/3^i) + \sum_{j=0}^{i-1} 3^i (n/3^i)^3$
+$T(n) = 3^k T(n/3^k) + \sum_{i=0}^{k-1} 3^i (n/3^i)^3$
 
-Substituting in $i = \log_{3} n$:
+Substituting in $k = \log_{3} n$:
 
 $= nT(1) + (n^4 - n^3)/2$
 
